@@ -45,9 +45,9 @@ public class Main {
         System.out.println("F(" + x3 + ")" + tochnoe(x3));
 
         System.out.println();
-        fullLangranz(massX, massY, n1, x1);
-        fullLangranz(massX, massY, n1, x2);
-        fullLangranz(massX, massY, n1, x3);
+//        fullLangranz(massX, massY, n1, x1);
+//        fullLangranz(massX, massY, n1, x2);
+//        fullLangranz(massX, massY, n1, x3);
 
         fullNuton(massX, massY, n2, x1);
         fullNuton(massX, massY, n2, x2);
@@ -57,8 +57,8 @@ public class Main {
 
     public static int start(List<BigDecimal> massX, BigDecimal x, int n) {
         for (int i = 0; i < massX.size(); i++) {
-            if (massX.get(i).compareTo(x) > 0) {
-                return Math.max(i / n, 0);
+            if (massX.get(i).compareTo(x) == -1) {
+                return Math.max((i / n) - 1, 0);
             }
         }
         return 0;
